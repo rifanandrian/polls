@@ -1,6 +1,6 @@
 package com.example.polls.model;
 
-//import com.example.polls.model.audit.DateAudit;
+import com.example.polls.model.audit.DateAudit;
 import org.hibernate.annotations.NaturalId;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -19,7 +19,7 @@ import java.util.Set;
         })
 })
 
-public class User {
+public class User extends DateAudit {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
